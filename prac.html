@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="item4" id="total"> 2 </div> 
+                                       
+    <div class="checkout__order__subtotal" id="subprice"></div>
+    <div class="checkout__order__total" id="totalprice"></div>
+    <button type="submit" class="btn btn-primary">PLACE ORDER</button>
+    <script>
+        $(document).ready(function(){
+                        var totalPay=0;
+                        $(".item4").each(function(){
+                                totalPay = totalPay + parseInt($(this).text());
+                            });
+
+                            //합계를 출력
+                            $("#subprice").html("<span> Suvtotal : "+totalPay+"</span>");
+                            $("#totalprice").html("<span> Total : "+totalPay+"</span>");
+                });
+
+    </script>
+</body>
+</html>
